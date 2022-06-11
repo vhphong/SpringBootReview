@@ -34,7 +34,7 @@ public class TutorialService {
 
 
     // find tutorial by containing
-    public List<Tutorial> findTutorialByContaining(String titleText){
+    public List<Tutorial> findTutorialByContaining(String titleText) {
         return tutorialRepo.findByTitleContainingIgnoreCase(titleText);
     }
 

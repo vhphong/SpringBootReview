@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ITutorialRepo extends JpaRepository<Tutorial, Long> {
     List<Tutorial> findByPublished(boolean published);
+
     List<Tutorial> findByTitleContaining(String title);
 
     List<Tutorial> findByTitleContainingIgnoreCase(String title);

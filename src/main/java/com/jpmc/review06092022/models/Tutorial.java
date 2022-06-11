@@ -15,7 +15,7 @@ public class Tutorial {
     private String description;
     @Column(name = "published")
     private boolean published;
-    @Column(name="quantity")
+    @Column(name = "quantity")
     private int quantity;
     @Column(name = "price")
     private double price;

@@ -56,7 +56,7 @@ public class TutorialController {
 
     // get tutorial by title
     @GetMapping("/title/{title}")
-    public ResponseEntity<List<Tutorial>> getTutorialbyTitle(@PathVariable("title") String tt) {
+    public ResponseEntity<List<Tutorial>> getTutorialByTitle(@PathVariable("title") String tt) {
         try {
             List<Tutorial> tutorialList = tutorialService.findTutorialByContaining(tt);
             if (!tutorialList.isEmpty()) {
@@ -88,8 +88,7 @@ public class TutorialController {
 
     // update tutorial
     @PutMapping("/update/{tid}")
-    public ResponseEntity<Tutorial> modifyTutorial(@PathVariable("tid") long tutorialId,
-                                                   @RequestBody Tutorial newTutorial) {
+    public ResponseEntity<Tutorial> modifyTutorial(@PathVariable("tid") long tutorialId, @RequestBody Tutorial newTutorial) {
         return new ResponseEntity<>(tutorialService.updateTutorial(newTutorial), HttpStatus.OK);
     }
 
